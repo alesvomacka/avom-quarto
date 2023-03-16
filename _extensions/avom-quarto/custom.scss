@@ -1,0 +1,90 @@
+/*-- scss:defaults --*/
+
+// Import fonts
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&family=Fira+Sans&family=Fira+Sans+Condensed&display=swap');
+
+// Fonts
+$font-family-sans-serif: 'Fira Sans Condensed', sans-serif !default;
+
+//Code
+$code-color: #af3a03 !default;
+$font-family-monospace: 'Fira Code', monospace !default; //code font
+
+// General  
+$body-bg: #f9f5d7; // slide backround color
+$body-color: #3c3836; // text color
+$link-color: #d65d0e; // hypertext color
+$presentation-font-size-root: 35px; // base text size
+
+// headings
+$presentation-heading-font: 'Fira Sans', sans-serif  !default; // Headings font
+$presentation-heading-color: #3c3836 !default; // heading color
+$h1-font-size: 1.6em !default; // default H1 font size
+$h2-font-size: 1.3em !default; // default H2 font size
+$h3-font-size: 1.15em !default; // default H3 font size
+
+/*-- scss:rules --*/
+
+.reveal pre code {
+  background-color: #f9f5d7; // Codeblock backround color
+  font-size: 1em;
+  padding: 0.5em;
+  line-height: 1.2em;
+}
+
+
+.subtitle {
+  color: $body-color;
+  font-size: $h2-font-size;
+  font-family: $presentation-heading-font;
+} // subtitle styling
+
+.author {
+  color: $body-bg;
+  font-size: $h2-font-size;
+  font-family: $presentation-heading-font;
+} // Author name styling
+
+.footer {
+  font-family: $presentation-heading-font;
+} // Footer styling
+
+.reveal .slide-number {
+  font-family: $presentation-heading-font;
+} // slide number styling
+
+.reveal .panel-tabset [role=tab] {
+    font-size: 0.8em;
+} // Tabset styling
+
+.reveal .footer {
+    color: $body-color;
+} // Footer styling
+
+
+.center-x{
+    text-align: center;
+}
+
+section.has-dark-background a, section.has-dark-background a:hover {
+    color: #d65d0e;
+}
+
+
+.slide-logo {
+  display: block !important;
+  position: fixed !important;
+  bottom: 10px !important; // distance from slide's bottom
+  right: 20px !important; // distance from slide's right side
+  max-height: 15% !important;
+  height: 100% !important;
+  width: auto !important;
+  color: $body-color !important;
+}
+
+.slide-number, .reveal.has-logo .slide-number {
+  bottom: 10px !important;
+  right: 100px !important;
+  top: unset !important;
+  color: $body-color !important;
+}

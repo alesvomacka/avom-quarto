@@ -1,0 +1,26 @@
+---
+title: Tale of Two Squirrels
+format:
+  avom-quarto-revealjs: default
+author: Aleš Vomáčka
+date: last-modified
+embed-resources: true
+---
+
+## Squirell Facts
+
+- THERE ARE AROUND 280 DIFFERENT SPECIES OF SQUIRREL
+- SQUIRRELS CAN FIND BURIED FOOD BENEATH A FOOT OF SNOW
+- THEY’LL PRETEND TO HIDE FOOD
+
+More squirrel fact at <https://wildlifeinformer.com/facts-about-squirrels/>
+
+## Some R Code
+
+```{r}
+#| echo: true
+mtcars |> 
+  transform(am = as.factor(am)) |> 
+  aggregate(mpg ~ am, mean) |> 
+  barplot(mpg ~ am, data = _)
+```
