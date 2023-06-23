@@ -1,7 +1,9 @@
 /*-- scss:defaults --*/
 
 // Import fonts
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code&family=Fira+Sans&family=Fira+Sans+Condensed&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Fira+Sans:300,300i,700,700i");
+@import url("https://fonts.googleapis.com/css?family=Fira+Sans+Condensed:300,300i,700,700i");
+@import url("https://fonts.googleapis.com/css?family=Fira+Code:300,300i,700,700i");
 
 // Fonts
 $font-family-sans-serif: 'Fira Sans Condensed', sans-serif !default;
@@ -19,6 +21,7 @@ $presentation-font-size-root: 35px; // base text size
 // headings
 $presentation-heading-font: 'Fira Sans', sans-serif  !default; // Headings font
 $presentation-heading-color: #3c3836 !default; // heading color
+$presentation-heading-color-light: lighten($presentation-heading-color,  25%);
 $h1-font-size: 1.6em !default; // default H1 font size
 $h2-font-size: 1.3em !default; // default H2 font size
 $h3-font-size: 1.15em !default; // default H3 font size
@@ -26,65 +29,45 @@ $h3-font-size: 1.15em !default; // default H3 font size
 /*-- scss:rules --*/
 
 .reveal pre code {
-  background-color: #f9f5d7; // Codeblock backround color
+  background-color: $body-bg; // Codeblock backround color
   font-size: 1em;
   padding: 0.5em;
   line-height: 1.2em;
 }
 
+#title-slide {
+  text-align: left;
+  color: $presentation-heading-color;
+  
+  .title {
+    font-weight: 700;
+  }
+  
+  .quarto-title-authors {
+    display: flex;
+    justify-content: left;
 
-.subtitle {
-  color: $body-color;
-  font-size: $h2-font-size;
-  font-family: $presentation-heading-font;
-} // subtitle styling
+    .quarto-title-author {
+      padding-left: 0em;
+      padding-right: 0em;
+      width: 100%;
+    }
+  }
+  
+ .date {
+   font-size: 24.5px;
+   margin-bottom: 8px;
+   margin-top: 0px;
+ }
+  
+}
 
-.author {
-  color: $body-bg;
-  font-size: $h2-font-size;
-  font-family: $presentation-heading-font;
-} // Author name styling
-
-.footer {
-  font-family: $presentation-heading-font;
-} // Footer styling
-
-.reveal .slide-number {
-  font-family: $presentation-heading-font;
-} // slide number styling
-
-.reveal .panel-tabset [role=tab] {
-    font-size: 0.8em;
-} // Tabset styling
-
-.reveal .footer {
+p.author::before, div.quarto-title-author::before {
+    content: "";
+    display: block;
+    border: none;
+    background-color: $body-color;
     color: $body-color;
-} // Footer styling
-
-
-.center-x{
-    text-align: center;
-}
-
-section.has-dark-background a, section.has-dark-background a:hover {
-    color: #d65d0e;
-}
-
-
-.slide-logo {
-  display: block !important;
-  position: fixed !important;
-  bottom: 10px !important; // distance from slide's bottom
-  right: 20px !important; // distance from slide's right side
-  max-height: 15% !important;
-  height: 100% !important;
-  width: auto !important;
-  color: $body-color !important;
-}
-
-.slide-number, .reveal.has-logo .slide-number {
-  bottom: 10px !important;
-  right: 100px !important;
-  top: unset !important;
-  color: $body-color !important;
-}
+    height: 3px;
+    margin-bottom: 1em;
+  } //Separation line between author and title/subtitle

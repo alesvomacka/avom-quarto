@@ -1,9 +1,13 @@
 ---
 title: Tale of Two Squirrels
+subtitle: Because Squirells are cool!
 format:
   avom-quarto-revealjs: default
 author: Aleš Vomáčka
+institute: Charles University, Department of Sociology
 date: last-modified
+date-format: "D. M. YYYY"
+logo: _extensions/avom-quarto/logo.svg
 embed-resources: true
 ---
 
