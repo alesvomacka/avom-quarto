@@ -8,14 +8,15 @@ institute: Charles University, Department of Sociology
 date: last-modified
 date-format: "D. M. YYYY"
 logo: _extensions/avom-quarto/logo.svg
+footer: Tale of Two Squirrels
 embed-resources: true
 ---
 
 ## Squirell Facts
 
-- THERE ARE AROUND 280 DIFFERENT SPECIES OF SQUIRREL
-- SQUIRRELS CAN FIND BURIED FOOD BENEATH A FOOT OF SNOW
-- THEY’LL PRETEND TO HIDE FOOD
+-   THERE ARE AROUND [280]{.highlight} DIFFERENT SPECIES OF SQUIRRELS.
+-   SQUIRRELS CAN FIND BURIED FOOD BENEATH A [FOOT OF SNOW]{.highlight}.
+-   THEY'LL PRETEND TO [HIDE FOOD]{.highlight} IN AN ATTEMPT TO THROW OFF POTENTIAL THIEVES.
 
 More squirrel fact at <https://wildlifeinformer.com/facts-about-squirrels/>
 
@@ -23,8 +24,27 @@ More squirrel fact at <https://wildlifeinformer.com/facts-about-squirrels/>
 
 ```{r}
 #| echo: true
-mtcars |> 
-  transform(am = as.factor(am)) |> 
-  aggregate(mpg ~ am, mean) |> 
-  barplot(mpg ~ am, data = _)
+squirrels = seq(1, 10, .1)
+awesomeness = pexp(squirrels)
+
+plot(x = squirrels,
+     y = awesomeness,
+     type = "l",
+     main = "More squirrels, more awesomeness")
 ```
+
+##  {.center}
+
+::: {layout="[ [1], [1,1] ]"}
+::: endslide-thanks
+Thanks for listening!
+:::
+
+::: endslide-links
+<http://ales.vomacka.io>
+:::
+
+::: endslide-links
+[ales\@vomacka.io](mailto:ales@vomacka.io)
+:::
+:::
